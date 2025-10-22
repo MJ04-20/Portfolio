@@ -3,109 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrutyunjay Lodhi - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background-color: #333; /* Dark background color */
-            color: #fff; /* Text color */
-            font-family: "Papyrus", cursive; /* Set the entire font to "Papyrus" */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
-
-        header, nav {
-            background-color: #444; /* Dark header and navigation background color */
-            padding: 10px;
-        }
-
-        header h1, header p {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px;
-            border: 1px solid #555;
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
-            border-radius: 10px;
-        }
-
-       img {
- 	   width: 150px;
- 	   border: 2px solid white; /* Add a white border around the image */
- 	  
-	}
-
-        /* New styles to position the image in the top right corner */
-        .top-right-image {
-            position: absolute;
-            top: 10px; /* Adjust the distance from the top */
-            right: 10px; /* Adjust the distance from the right */
-        }
-
-        /* Style the icon links */
-        .icon-link {
-            text-decoration: none;
-            color: inherit;
-        }
-    </style>
+    <title>Mrutyunjay Lodhi | Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
-    <header>
-        <h1>Mrutyunjay Lodhi</h1>
-        <p>Web Developer</p>
-    </header>
+    <div class="container">
+        <header id="header">
+            <div class="profile-image-container">
+                <img src="Mrutyunjay_pic.jpg" alt="Mrutyunjay Lodhi" class="profile-image" id="profileImage">
+            </div>
+            <h1>Mrutyunjay Lodhi</h1>
+            <p class="subtitle">Software Developer | Open Source Enthusiast | Ex-Lead @ FOSS Club IIIT Kalyani</p>
+            <div class="contact-links">
+                <a href="tel:+919407017678">📞 +91-9407017678</a>
+                <a href="mailto:mrutyunjaylodhi@gmail.com">✉️ Email</a>
+                <a href="https://github.com/MJ04-20" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/mrutyunjay-lodhi" target="_blank">💼 LinkedIn</a>
+                <a href="https://bio.link" target="_blank">🔗 Bio.link</a>
+            </div>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <div class="section" data-section>
+            <h2>About Me</h2>
+            <p style="font-size: 1.2em; line-height: 1.8;">
+                Motivated B.Tech Computer Science student at IIIT Kalyani and Ex-Lead of FOSS Club IIIT Kalyani under FOSS United. 
+                Passionate about building scalable solutions, contributing to open-source, and leading 
+                technical communities. Proficient in Java, React, and modern web technologies with 
+                hands-on experience in organizing <span class="highlight">500+ participant hackathons</span> 
+                and driving technology adoption among students.
+            </p>
+        </div>
 
-    <img src="img1.jpg" alt="Mrutyunjay Lodhi" class="top-right-image"> <!-- Image in the top-right corner -->
+        <div class="section" data-section>
+            <h2>Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Freelance Web Developer - Olypedia</h3>
+                <p class="date">Recent Project</p>
+                <ul>
+                    <li>Developed and deployed <strong>Olypedia</strong>, a comprehensive web application hosted on Render</li>
+                    <li>Built responsive user interfaces using modern web technologies</li>
+                    <li>Implemented full-stack solutions with seamless deployment pipeline</li>
+                    <li>Delivered production-ready application meeting client requirements</li>
+                </ul>
+                <a href="https://olypedia-web.onrender.com/" target="_blank" class="project-link">View Live Project →</a>
+            </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm Mrutyunjay Lodhi, a first-year Computer Science Engineering (CSE) student at IIIT Kalyani. I have a passion for creating efficient and elegant software solutions. In addition to my programming skills, I'm dedicated to continuous learning and staying updated with the latest industry trends. I'm excited to showcase my work and skills in this portfolio.
-I know JAVA and C and learning more.....</p>
-    </section>
+            <div class="experience-item">
+                <h3>Ex-Lead – FOSS Club IIIT Kalyani (under FOSS United)</h3>
+                <p class="date">September 2024 – Present | Kalyani, India</p>
+                <ul>
+                    <li>Led FOSS Club IIIT Kalyani as part of the <strong>FOSS United network</strong>, promoting open-source culture</li>
+                    <li>Spearheaded <strong>10+ workshops and hackathons</strong>, driving Linux adoption among 100+ students</li>
+                    <li>Designed and executed the FOSS Evangelist Program with weekly technical meetups</li>
+                    <li>Built strategic partnerships via FOSS United Clubs Platform, achieving 3 inter-college collaborations</li>
+                </ul>
+            </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you would like to get in touch with me, feel free to contact me using the information below:</p>
-        <ul>
-            <li>
-                <a href="mailto:2004loadhi@gmail.com" class="icon-link">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/mrutyunjay-lodhi-b48171210" class="icon-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/MJ04-20" class="icon-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </li>
-        </ul>
-    </section>
+            <div class="experience-item">
+                <h3>Organizer – Status Code 2</h3>
+                <p class="date">August 2024 | India</p>
+                <ul>
+                    <li>Organized <strong>East India's second-largest student-run hackathon</strong> with 500+ participants</li>
+                    <li>Managed end-to-end operations and coordinated 10-member volunteer team</li>
+                    <li>Achieved exceptional participant satisfaction and positive feedback</li>
+                </ul>
+            </div>
 
-    <footer>
-        <p>&copy; 2023 Mrutyunjay Lodhi</p>
-    </footer>
+            <div class="experience-item">
+                <h3>Organizer – FOSS Hack 25</h3>
+                <p class="date">December 2024 – April 2025 | India</p>
+                <ul>
+                    <li>Coordinated national hackathon with zero critical issues during execution</li>
+                    <li>Streamlined participant onboarding and maintained stakeholder communication</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Core Team Member – FOSS Club IIIT Kalyani</h3>
+                <p class="date">May 2023 – August 2024 | Kalyani, India</p>
+                <ul>
+                    <li>Organized internal hackathons increasing Linux and FOSS adoption among 80+ students</li>
+                    <li>Led outreach programs boosting student engagement by 30%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" data-section>
+            <h2>Featured Projects</h2>
+            
+            <div class="project-item">
+                <h3>Olypedia (Freelance)</h3>
+                <p>A comprehensive web application built for client requirements with modern tech stack and cloud deployment.</p>
+                <a href="https://olypedia-web.onrender.com/" target="_blank" class="project-link">Live Demo →</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Custom Search Engine</h3>
+                <p>Developed using Java with advanced crawling algorithms and keyword ranking system. Achieved 20% reduction in query response time through performance optimization.</p>
+            </div>
+
+            <div class="project-item">
+                <h3>IdeaHack – Hackathon Winner</h3>
+                <p>React-based web application deployed on Firebase. Implemented scalable UI components with enhanced user interaction patterns.</p>
+                <a href="https://ideahack-7b695.web.app/" target="_blank" class="project-link">Live Demo →</a>
+            </div>
+
+            <div class="project-item">
+                <h3>CyntaxError</h3>
+                <p>Interactive hackathon platform built with React. Recognized for clean design, intuitive navigation, and excellent usability.</p>
+                <a href="https://cyntaxeror.web.app/" target="_blank" class="project-link">Live Demo →</a>
+            </div>
+        </div>
+
+        <div class="section" data-section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <p>Java • JavaScript • C++ • Data Structures & Algorithms</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks & Libraries</h4>
+                    <p>React • React Hooks • REST APIs</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Technologies</h4>
+                    <p>Git • GitHub • Firebase • Linux • Cloud Deployment</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Concepts & Methodologies</h4>
+                    <p>Agile • OOP • SDLC • Web Development • Version Control</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Mrutyunjay Lodhi. Open to Software Developer & Internship Opportunities.</p>
+            <p style="margin-top: 10px;">📍 Kalyani, India</p>
+        </footer>
+    </div>
+
+
+       <script src="script.js"></script>
 </body>
 </html>
