@@ -1,166 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrutyunjay Lodhi | Software Developer</title>
-    <link rel="stylesheet" href="style.css">
-   <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mrutyunjay Lodhi — Backend & Software Engineer</title>
+  <meta name="description" content="Portfolio of Mrutyunjay Lodhi — Backend & Software Engineering Intern, B.Tech CSE at IIIT Kalyani. Building scalable systems, contributing to open source.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header id="header">
-            <div class="profile-image-container">
-                <img src="Mrutyunjay_pic.jpg" alt="Mrutyunjay Lodhi" class="profile-image" id="profileImage">
-            </div>
-            <h1>Mrutyunjay Lodhi</h1>
-            <p class="subtitle">Software Developer | Open Source Enthusiast | Ex-Lead @ FOSS Club IIIT Kalyani</p>
-            <div class="contact-links">
-                <a href="tel:+919407017678">📞 +91-9407017678</a>
-                <a href="mailto:mrutyunjaylodhi@gmail.com">✉️ Email</a>
-                <a href="https://github.com/MJ04-20" target="_blank">💻 GitHub</a>
-                <a href="https://www.linkedin.com/in/mrutyunjay-lodhi-b48171210/" target="_blank">💼 LinkedIn</a>
-                <a href="https://bio.link" target="_blank">🔗 Bio.link</a>
-            </div>
-        </header>
 
-        <div class="section" data-section>
-            <h2>About Me</h2>
-            <p style="font-size: 1.2em; line-height: 1.8;">
-                Motivated B.Tech Computer Science student at IIIT Kalyani and Ex-Lead of FOSS Club IIIT Kalyani under FOSS United. 
-                Passionate about building scalable solutions, contributing to open-source, and leading 
-                technical communities. Proficient in Java, React, and modern web technologies with 
-                hands-on experience in organizing <span class="highlight">500+ participant hackathons</span> 
-                and driving technology adoption among students.
-            </p>
+  <!-- Anti-Gravity Background Canvas -->
+  <canvas id="antigravity-canvas"></canvas>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="navbar">
+    <a href="#hero" class="nav__logo">&lt;MJ /&gt;<span>_</span></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#hero" data-nav="hero">Home</a></li>
+      <li><a href="#experience" data-nav="experience">Experience</a></li>
+      <li><a href="#projects" data-nav="projects">Projects</a></li>
+      <li><a href="#stack" data-nav="stack">Stack</a></li>
+    </ul>
+    <div class="nav__right">
+      <div class="contact-wrap">
+        <button class="contact-btn" id="contactBtn" aria-label="Contact me">Contact Me</button>
+        <div class="contact-dropdown" id="contactDropdown">
+          <p class="contact-dropdown__title">Get in Touch</p>
+          <a href="mailto:mrutyunjaylodhi@gmail.com" class="contact-dropdown__item" id="contactEmail">
+            <span class="contact-dropdown__icon">✉</span>
+            <span>mrutyunjaylodhi@gmail.com</span>
+          </a>
+          <a href="tel:+919407017678" class="contact-dropdown__item" id="contactPhone">
+            <span class="contact-dropdown__icon">📞</span>
+            <span>+91 9407017678</span>
+          </a>
         </div>
-
-        <div class="section" data-section>
-            <h2>Experience</h2>
-            
-             <div class="experience-item">
-                <h3>Product Contributor - InternOrbit</h3>
-                <p class="date">Recent Project</p>
-                <ul>
-                    <li> Designed and implemented a resume upload and parsing feature for an existing MERN-based internship platform.</li>
-                    <li>Built secure backend APIs using Node.js, Express.js, MongoDB, and Multer to handle PDF/DOC resume uploads
-                        with validation and size limits.</li>
-                    <li> Integrated AI-assisted resume parsing (Gemini API) to extract structured data and enable auto-profile
-                        completion.</li>
-                    <li>Worked within an active production codebase, following modular architecture and RESTful API design principles.</li>
-                </ul>
-                <a href="https://internorbit.com/" target="_blank" class="project-link">View Live Project →</a>
-            </div>
-
-            <div class="experience-item">
-                <h3>Freelance Web Developer - Olypedia</h3>
-                
-                <ul>
-                    <li>Developed and deployed <strong>Olypedia</strong>, a comprehensive web application hosted on Render</li>
-                    <li>Built responsive user interfaces using modern web technologies</li>
-                    <li>Implemented full-stack solutions with seamless deployment pipeline</li>
-                    <li>Delivered production-ready application meeting client requirements</li>
-                </ul>
-                <a href="https://olypedia-web.onrender.com/" target="_blank" class="project-link">View Live Project →</a>
-            </div>
-
-            <div class="experience-item">
-                <h3>Ex-Lead – FOSS Club IIIT Kalyani (under FOSS United)</h3>
-                <p class="date">September 2024 – Present | Kalyani, India</p>
-                <ul>
-                    <li>Led FOSS Club IIIT Kalyani as part of the <strong>FOSS United network</strong>, promoting open-source culture</li>
-                    <li>Spearheaded <strong>10+ workshops and hackathons</strong>, driving Linux adoption among 100+ students</li>
-                    <li>Designed and executed the FOSS Evangelist Program with weekly technical meetups</li>
-                    <li>Built strategic partnerships via FOSS United Clubs Platform, achieving 3 inter-college collaborations</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Organizer – Status Code 2</h3>
-                <p class="date">August 2024 | India</p>
-                <ul>
-                    <li>Organized <strong>East India's second-largest student-run hackathon</strong> with 500+ participants</li>
-                    <li>Managed end-to-end operations and coordinated 10-member volunteer team</li>
-                    <li>Achieved exceptional participant satisfaction and positive feedback</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Organizer – FOSS Hack 25</h3>
-                <p class="date">December 2024 – April 2025 | India</p>
-                <ul>
-                    <li>Coordinated national hackathon with zero critical issues during execution</li>
-                    <li>Streamlined participant onboarding and maintained stakeholder communication</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Core Team Member – FOSS Club IIIT Kalyani</h3>
-                <p class="date">May 2023 – August 2024 | Kalyani, India</p>
-                <ul>
-                    <li>Organized internal hackathons increasing Linux and FOSS adoption among 80+ students</li>
-                    <li>Led outreach programs boosting student engagement by 30%</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section" data-section>
-            <h2>Featured Projects</h2>
-            
-            <div class="project-item">
-                <h3>Olypedia (Freelance)</h3>
-                <p>A comprehensive web application built for client requirements with modern tech stack and cloud deployment.</p>
-                <a href="https://olypedia-web.onrender.com/" target="_blank" class="project-link">Live Demo →</a>
-            </div>
-
-            <div class="project-item">
-                <h3>Custom Search Engine</h3>
-                <p>Developed using Java with advanced crawling algorithms and keyword ranking system. Achieved 20% reduction in query response time through performance optimization.</p>
-            </div>
-
-            <div class="project-item">
-                <h3>IdeaHack – Hackathon Winner</h3>
-                <p>React-based web application deployed on Firebase. Implemented scalable UI components with enhanced user interaction patterns.</p>
-                <a href="https://ideahack-7b695.web.app/" target="_blank" class="project-link">Live Demo →</a>
-            </div>
-
-            <div class="project-item">
-                <h3>CyntaxError</h3>
-                <p>Interactive hackathon platform built with React. Recognized for clean design, intuitive navigation, and excellent usability.</p>
-                <a href="https://cyntaxeror.web.app/" target="_blank" class="project-link">Live Demo →</a>
-            </div>
-        </div>
-
-        <div class="section" data-section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming Languages</h4>
-                    <p>Java • JavaScript • C++ • Data Structures & Algorithms</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Frameworks & Libraries</h4>
-                    <p>React • React Hooks • REST APIs</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Tools & Technologies</h4>
-                    <p>Git • GitHub • Firebase • Linux • Cloud Deployment</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Concepts & Methodologies</h4>
-                    <p>Agile • OOP • SDLC • Web Development • Version Control</p>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>© 2025 Mrutyunjay Lodhi. Open to Software Developer & Internship Opportunities.</p>
-            <p style="margin-top: 10px;">📍 Kalyani, India</p>
-        </footer>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main">
 
-       <script src="script.js"></script>
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="hero">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__greeting">// hello world, I'm</p>
+          <h1 class="hero__name">Mrutyunjay<br><span class="accent">Lodhi.</span></h1>
+          <p class="hero__tagline" id="heroTagline">
+            <span id="typedText"></span><span class="cursor"></span>
+          </p>
+
+          <!-- Cat Run Mini-Game -->
+          <div class="cat-wrap" id="catWrap">
+            <canvas id="cat-game"></canvas>
+            <p class="cat-hint" id="catHint">Press <kbd>Space</kbd> or tap to play</p>
+          </div>
+
+          <p class="hero__subtitle">
+            Building scalable backends, championing open-source culture, and organizing
+            East India's largest student hackathons.
+          </p>
+          <div class="hero__links">
+            <a href="https://github.com/MJ04-20" target="_blank" rel="noopener" class="hero__link hero__link--primary" id="heroGithub">
+              ⟨/⟩ GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/mrutyunjay-lodhi-b48171210/" target="_blank" rel="noopener" class="hero__link hero__link--secondary" id="heroLinkedin">
+              in LinkedIn
+            </a>
+            <a href="mailto:mrutyunjaylodhi@gmail.com" class="hero__link hero__link--secondary" id="heroEmail">
+              ✉ Email
+            </a>
+          </div>
+        </div>
+        <div class="hero__image-wrap">
+          <div class="hero__image-container">
+            <img src="Mrutyunjay_pic.jpg" alt="Mrutyunjay Lodhi" class="hero__image" id="profileImage">
+            <div class="hero__image-ring"></div>
+            <div class="hero__image-ring hero__image-ring--outer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE & LEADERSHIP ===== -->
+    <section class="section" id="experience" data-section>
+      <p class="section__label">Experience</p>
+      <h2 class="section__title">Where I've Worked & Led</h2>
+
+      <div class="timeline">
+        <!-- Zurekaa -->
+        <div class="timeline__item">
+          <div class="timeline__header">
+            <div>
+              <p class="timeline__role">Backend Engineering Intern</p>
+              <p class="timeline__org">Zurekaa</p>
+              <p class="timeline__date">Feb 2026 — May 2026</p>
+            </div>
+            <a href="https://www.zurekaa.com/" target="_blank" rel="noopener" class="timeline__view-btn" id="linkZurekaa">View Project</a>
+          </div>
+          <ul class="timeline__desc">
+            <li>Engineered a highly modular web scraping pipeline utilizing Playwright and Puppeteer to extract, process, and normalize global scholarship and grant data from complex, dynamic international portals.</li>
+            <li>Architected scalable backend services using TypeScript, Express.js, and PostgreSQL, implementing strict Zod validation schemas to guarantee data integrity and eliminate database insertion failures.</li>
+            <li>Developed an automated Lab Import REST API featuring intelligent rate-limiting and robust foreign-key sequence management to perfectly synchronize nested entities.</li>
+          </ul>
+        </div>
+
+        <!-- InternOrbit -->
+        <div class="timeline__item">
+          <div class="timeline__header">
+            <div>
+              <p class="timeline__role">Product Contributor — Backend Developer</p>
+              <p class="timeline__org">InternOrbit</p>
+              <p class="timeline__date">Dec 2025</p>
+            </div>
+            <a href="https://internorbit.com/" target="_blank" rel="noopener" class="timeline__view-btn" id="linkInternOrbit">View Project</a>
+          </div>
+          <ul class="timeline__desc">
+            <li>Built and secured robust backend API architecture using Node.js, Express.js, and MongoDB for a dynamic platform connecting students with startup internships.</li>
+            <li>Designed an automated and validated PDF/DOC resume upload pipeline with strict file-type validation and size limits.</li>
+            <li>Successfully integrated Google's Gemini API for advanced AI-assisted document parsing, enabling the platform to accurately extract structured professional data and power instantaneous, automated user profile generation.</li>
+          </ul>
+        </div>
+
+        <!-- FOSS Club Lead -->
+        <div class="timeline__item">
+          <p class="timeline__role">Lead</p>
+          <p class="timeline__org">FOSS Club, IIIT Kalyani (under FOSS United)</p>
+          <p class="timeline__date">Sep 2024 — Aug 2025</p>
+          <ul class="timeline__desc">
+            <li>Spearheaded public relations and strategic community outreach initiatives for the club.</li>
+            <li>Successfully negotiated and secured crucial sponsorships and partnerships to fund club activities.</li>
+            <li>Directed and hosted over 10 hands-on open-source technical workshops, mentoring a community of 100+ students in modern software development practices.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section class="section" id="projects" data-section>
+      <p class="section__label">Projects</p>
+      <h2 class="section__title">Things I've Built</h2>
+
+      <div class="bento">
+        <!-- CookethOrg — wide card, FIRST -->
+        <div class="bento__card bento__card--wide">
+          <span class="bento__icon">🍳</span>
+          <div class="bento__head">
+            <h3 class="bento__title">CookethOrg</h3>
+            <a href="https://cookethorg.github.io/CookethOrg/" target="_blank" rel="noopener" class="bento__view-btn" id="linkCookethOrg">View Project</a>
+          </div>
+          <div class="bento__tags">
+            <span class="bento__tag">HTML</span>
+            <span class="bento__tag">CSS</span>
+            <span class="bento__tag">Responsive</span>
+          </div>
+          <p class="bento__desc">
+            Developed the official website and digital presence for the CookethOrg organization,
+            focusing on a clean, responsive user interface and accessible layout.
+          </p>
+        </div>
+
+        <!-- Olypedia -->
+        <div class="bento__card">
+          <span class="bento__icon">🌐</span>
+          <div class="bento__head">
+            <h3 class="bento__title">Olypedia</h3>
+            <a href="https://olypedia-web.onrender.com/" target="_blank" rel="noopener" class="bento__view-btn" id="linkOlypedia">View Project</a>
+          </div>
+          <div class="bento__tags">
+            <span class="bento__tag">Django</span>
+            <span class="bento__tag">HTML</span>
+            <span class="bento__tag">Tailwind CSS</span>
+            <span class="bento__tag">CI/CD</span>
+          </div>
+          <p class="bento__desc">
+            Full-stack freelance platform built with Django, HTML, and Tailwind CSS, featuring dynamic
+            content management and automated CI/CD deployment pipelines.
+          </p>
+        </div>
+
+        <!-- IdeaHack -->
+        <div class="bento__card">
+          <span class="bento__icon">💡</span>
+          <div class="bento__head">
+            <h3 class="bento__title">IdeaHack</h3>
+            <a href="https://ideahack-7b695.web.app/" target="_blank" rel="noopener" class="bento__view-btn" id="linkIdeaHack">View Project</a>
+          </div>
+          <div class="bento__tags">
+            <span class="bento__tag">React.js</span>
+            <span class="bento__tag">Firebase</span>
+          </div>
+          <p class="bento__desc">
+            Responsive web application engineered during a high-pressure 24-hour hackathon,
+            utilizing React.js and Firebase with modular, reusable UI components.
+          </p>
+        </div>
+
+        <!-- Search Engine Optimizer -->
+        <div class="bento__card bento__card--wide">
+          <span class="bento__icon">🔍</span>
+          <div class="bento__head">
+            <h3 class="bento__title">Search Engine Optimizer</h3>
+          </div>
+          <div class="bento__tags">
+            <span class="bento__tag">Java</span>
+            <span class="bento__tag">Web Crawling</span>
+            <span class="bento__tag">Graph Ranking</span>
+            <span class="bento__tag">Indexing</span>
+          </div>
+          <p class="bento__desc">
+            Custom Java-based search engine implementing advanced web crawling, keyword indexing,
+            and graph-theory ranking mechanisms, successfully optimizing query processing to
+            reduce response times by 20%.
+          </p>
+          <p class="bento__stat">↓ 20% response time</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECH STACK MARQUEE ===== -->
+    <section class="section marquee-section" id="stack" data-section>
+      <p class="section__label">Tech Stack</p>
+      <h2 class="section__title">Tools I Work With</h2>
+
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeTrack">
+          <div class="marquee-item"><span class="marquee-item__icon">⟨/⟩</span> JavaScript</div>
+          <div class="marquee-item"><span class="marquee-item__icon">TS</span> TypeScript</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🐍</span> Python</div>
+          <div class="marquee-item"><span class="marquee-item__icon">☕</span> Java</div>
+          <div class="marquee-item"><span class="marquee-item__icon">⬢</span> Node.js</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🚂</span> Express.js</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🐘</span> PostgreSQL</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🍃</span> MongoDB</div>
+          <div class="marquee-item"><span class="marquee-item__icon">⚛</span> React.js</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🎭</span> Playwright</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🤖</span> Puppeteer</div>
+          <div class="marquee-item"><span class="marquee-item__icon">✦</span> Gemini API</div>
+          <!-- Duplicate for seamless scroll -->
+          <div class="marquee-item"><span class="marquee-item__icon">⟨/⟩</span> JavaScript</div>
+          <div class="marquee-item"><span class="marquee-item__icon">TS</span> TypeScript</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🐍</span> Python</div>
+          <div class="marquee-item"><span class="marquee-item__icon">☕</span> Java</div>
+          <div class="marquee-item"><span class="marquee-item__icon">⬢</span> Node.js</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🚂</span> Express.js</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🐘</span> PostgreSQL</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🍃</span> MongoDB</div>
+          <div class="marquee-item"><span class="marquee-item__icon">⚛</span> React.js</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🎭</span> Playwright</div>
+          <div class="marquee-item"><span class="marquee-item__icon">🤖</span> Puppeteer</div>
+          <div class="marquee-item"><span class="marquee-item__icon">✦</span> Gemini API</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="https://github.com/MJ04-20" target="_blank" rel="noopener" class="footer__link" id="footerGithub">GitHub</a>
+      <a href="https://www.linkedin.com/in/mrutyunjay-lodhi-b48171210/" target="_blank" rel="noopener" class="footer__link" id="footerLinkedin">LinkedIn</a>
+      <a href="mailto:mrutyunjaylodhi@gmail.com" class="footer__link" id="footerEmail">Email</a>
+    </div>
+    <p class="footer__copy">© 2025 Mrutyunjay Lodhi <span class="accent">.</span> Built with raw HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
