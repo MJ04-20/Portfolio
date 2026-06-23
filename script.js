@@ -1,13 +1,10 @@
-/* ============================================================
-   ANTI-GRAVITY PORTFOLIO — Script
-   Anti-gravity particle engine + Dino Run game + UI interactions
-   ============================================================ */
+
 
 (function () {
   'use strict';
 
   /* ----------------------------------------------------------
-     1. ANTI-GRAVITY CANVAS ENGINE
+     1. CANVAS ENGINE
      ---------------------------------------------------------- */
 
   const canvas = document.getElementById('antigravity-canvas');
