@@ -4,6 +4,12 @@
   'use strict';
 
   /* ----------------------------------------------------------
+     RESUME URL — Change this single variable to update the link.
+     (Google Drive "Manage Versions" keeps the URL stable.)
+     ---------------------------------------------------------- */
+  var RESUME_URL = 'https://drive.google.com/file/d/1bvRD2f3-P1gSJsXfQJTg27croV3-c5xB/view?usp=drive_link';
+
+  /* ----------------------------------------------------------
      1. CANVAS ENGINE
      ---------------------------------------------------------- */
 
@@ -695,6 +701,16 @@
         contactBtn.classList.remove('active');
       }
     });
+  }
+
+
+  /* ----------------------------------------------------------
+     4d. RESUME CARD LINK
+     ---------------------------------------------------------- */
+
+  var resumeCard = document.getElementById('resumeCard');
+  if (resumeCard) {
+    resumeCard.href = RESUME_URL;
   }
 
 

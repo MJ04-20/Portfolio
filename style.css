@@ -980,6 +980,253 @@ body {
 }
 
 /* 
+   RESUME SECTION
+    */
+.resume-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.resume-card {
+  position: relative;
+  display: block;
+  width: 340px;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  background: rgba(26, 26, 26, 0.6);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.resume-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.resume-card:hover::before {
+  opacity: 1;
+}
+
+.resume-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border-color: var(--accent-dim);
+  box-shadow:
+    0 0 40px var(--accent-glow),
+    0 0 80px rgba(0, 255, 200, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Faux paper preview --- */
+.resume-card__paper {
+  aspect-ratio: 8.5 / 11;
+  background: linear-gradient(168deg, #1e1e24 0%, #16161b 50%, #1a1a20 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-sm);
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Subtle paper grain texture */
+.resume-card__paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.008) 3px,
+    rgba(255, 255, 255, 0.008) 4px
+  );
+  pointer-events: none;
+}
+
+/* Corner fold decoration */
+.resume-card__paper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(225deg, var(--bg-primary) 50%, rgba(0, 255, 200, 0.08) 50%);
+  border-bottom-left-radius: 4px;
+}
+
+/* --- Header blocks --- */
+.resume-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 0.6rem;
+}
+
+.resume-card__name-block {
+  width: 55%;
+  height: 10px;
+  background: linear-gradient(90deg, var(--accent-dim), rgba(0, 255, 200, 0.3));
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.resume-card__contact-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.resume-card__contact-block {
+  width: 22%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 1px;
+}
+
+.resume-card__contact-block--short {
+  width: 15%;
+}
+
+/* --- Section dividers --- */
+.resume-card__divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resume-card__divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 255, 200, 0.1);
+}
+
+.resume-card__divider-label {
+  width: 20%;
+  height: 5px;
+  background: rgba(0, 255, 200, 0.2);
+  border-radius: 1px;
+}
+
+/* --- Text line blocks --- */
+.resume-card__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.resume-card__line {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1px;
+}
+
+.resume-card__line--95 { width: 95%; }
+.resume-card__line--90 { width: 90%; }
+.resume-card__line--80 { width: 80%; }
+.resume-card__line--75 { width: 75%; }
+.resume-card__line--70 { width: 70%; }
+.resume-card__line--60 { width: 60%; }
+
+/* --- Skill bars --- */
+.resume-card__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.resume-card__bar {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.resume-card__bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-dim), rgba(0, 255, 200, 0.25));
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+/* --- Hover overlay --- */
+.resume-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius-lg);
+}
+
+.resume-card:hover .resume-card__overlay {
+  opacity: 1;
+}
+
+.resume-card__overlay-text {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-shadow: 0 0 20px var(--accent-glow-strong);
+  letter-spacing: 0.5px;
+  transform: translateY(8px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.resume-card:hover .resume-card__overlay-text {
+  transform: translateY(0);
+}
+
+/* --- Badge --- */
+.resume-card__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+  transition: var(--transition-fast);
+}
+
+.resume-card__badge-icon {
+  color: var(--accent-dim);
+  opacity: 0.6;
+}
+
+.resume-card:hover ~ .resume-card__badge {
+  color: var(--accent-dim);
+}
+
+.resume-card:hover ~ .resume-card__badge .resume-card__badge-icon {
+  opacity: 1;
+}
+
+/* 
    FOOTER
     */
 .footer {
@@ -1199,6 +1446,15 @@ body {
   .main {
     padding: 0 1.2rem;
   }
+
+  .resume-card {
+    width: 300px;
+    padding: 1.2rem;
+  }
+
+  .resume-card__paper {
+    padding: 1.3rem 1.1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1230,5 +1486,23 @@ body {
   .bento__showcase-stack {
     max-width: 280px;
     height: 170px;
+  }
+
+  .resume-card {
+    width: 260px;
+    padding: 1rem;
+  }
+
+  .resume-card__paper {
+    padding: 1rem 0.9rem;
+    gap: 0.7rem;
+  }
+
+  .resume-card__name-block {
+    height: 8px;
+  }
+
+  .resume-card__overlay-text {
+    font-size: 0.85rem;
   }
 }
