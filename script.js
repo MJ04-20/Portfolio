@@ -739,4 +739,54 @@
     });
   });
 
+  /* ----------------------------------------------------------
+     7. BENTO SHOWCASE IMAGE SWAP
+     ---------------------------------------------------------- */
+
+  var showcaseStack = document.querySelector('.bento__showcase-stack');
+  var showcaseFront = document.getElementById('showcaseFront');
+  var showcaseBack = document.getElementById('showcaseBack');
+  var showcaseDots = document.querySelectorAll('.bento__showcase-dot');
+  var showcaseFlipped = false;
+
+  function toggleShowcase(toSlide) {
+    if (typeof toSlide === 'number') {
+      showcaseFlipped = toSlide === 1;
+    } else {
+      showcaseFlipped = !showcaseFlipped;
+    }
+
+    if (showcaseFlipped) {
+      showcaseFront.classList.add('flipped');
+      showcaseBack.classList.add('flipped');
+    } else {
+      showcaseFront.classList.remove('flipped');
+      showcaseBack.classList.remove('flipped');
+    }
+
+    // Update dots
+    showcaseDots.forEach(function (dot) {
+      var slide = parseInt(dot.getAttribute('data-slide'), 10);
+      if ((showcaseFlipped && slide === 1) || (!showcaseFlipped && slide === 0)) {
+        dot.classList.add('bento__showcase-dot--active');
+      } else {
+        dot.classList.remove('bento__showcase-dot--active');
+      }
+    });
+  }
+
+  if (showcaseStack) {
+    showcaseStack.addEventListener('click', function () {
+      toggleShowcase();
+    });
+  }
+
+  showcaseDots.forEach(function (dot) {
+    dot.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var slide = parseInt(this.getAttribute('data-slide'), 10);
+      toggleShowcase(slide);
+    });
+  });
+
 })();
